@@ -10,9 +10,11 @@ function createServer() {
 	}))
 	
 	app.use(express.json())	
-	app.use('/api/tables', Router.TableRouter)
-	app.use('/api/chairs', Router.ChairRouter)
-	app.use('/api/queues', Router.QueueRouter)
+	app.use('/api/users', Router.UserRouter)
+	app.use('/api/ingredients', Router.IngredientRouter)
+	app.use('/api/outlets', Router.OutletRouter)
+	// app.use('/api/chairs', Router.ChairRouter)
+	// app.use('/api/queues', Router.QueueRouter)
 	
 	return app
 }

@@ -10,6 +10,7 @@ mongoose
 
 		app.listen(3001, () => {
 			console.log("Server has started!")
+			console.log(process.env.DATABASE_URL)
 		})	
 	})
 
