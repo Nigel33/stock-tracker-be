@@ -18,12 +18,10 @@ exports.addUser = async (req, res) => {
   const data = new User({
     label: 'test',    
     test: 'dsddsd',
-  });
-
-  console.log(data);
+  });  
 
   const result = await data.save();
-  console.log(result);
+  
   return res.json(result);
 }
 

@@ -1,9 +1,12 @@
 const cors = require('cors')
 const express = require("express")
 const Router = require("./routes")
+const cookieParser = require("cookie-parser");
 
 function createServer() {
 	const app = express()
+
+	app.use(cookieParser())
 
 	app.use(cors({
 		origin: '*'		
@@ -13,6 +16,7 @@ function createServer() {
 	app.use('/api/users', Router.UserRouter)
 	app.use('/api/ingredients', Router.IngredientRouter)
 	app.use('/api/outlets', Router.OutletRouter)
+	app.use('/api/auth', Router.AuthRouter)
 	// app.use('/api/chairs', Router.ChairRouter)
 	// app.use('/api/queues', Router.QueueRouter)
 	
