@@ -5,6 +5,10 @@ exports.getIngredientsInOutlet = async (outletId) => {
   return outletViewModel.populateIngredientOutletsAndIngredient(outletId)
 }
 
+exports.getOutletsDictionary = async () => {
+  return outletViewModel.getDictionary()
+}
+
 
 //MAINTAIN REFERENCES 
 

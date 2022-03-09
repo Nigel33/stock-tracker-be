@@ -14,6 +14,7 @@ exports.validateUserType = (userTypes) => {
           if (!userTypes.includes(decodedToken.userType)) {
             return res.status(401).json({ message: "Not authorized" })
           } else {
+            res.locals.decodedUser = decodedToken
             next()
           }
         }

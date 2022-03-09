@@ -16,9 +16,7 @@ function createServer() {
 	app.use('/api/users', Router.UserRouter)
 	app.use('/api/ingredients', Router.IngredientRouter)
 	app.use('/api/outlets', Router.OutletRouter)
-	app.use('/api/auth', Router.AuthRouter)
-	// app.use('/api/chairs', Router.ChairRouter)
-	// app.use('/api/queues', Router.QueueRouter)
+	app.use('/api/auth', Router.AuthRouter)	
 	
 	return app
 }

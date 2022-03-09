@@ -11,4 +11,14 @@ exports.populateIngredientOutletsAndIngredient = async (outletId) => {
     })   
 }
 
+exports.getDictionary = async () => {
+  const outlets = await Outlet.find()
+
+  return outlets.map(x => {
+    return { _id: x._id, value: x.name }
+  })
+}
+
+
+
 

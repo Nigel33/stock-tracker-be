@@ -5,7 +5,7 @@ const ingredientOutletService = require("../services/ingredientOutletService")
 
 const ingredientRequestViewModel = require("../viewModels/requests/ingredientRequestViewModel")
 
-exports.getIngredients = async (req, res) => {
+exports.getIngredients = async (req, res) => {  
   ingredients = await Ingredient.find();  
   return res.json(ingredients);
 }
